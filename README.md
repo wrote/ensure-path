@@ -1,6 +1,6 @@
 # @wrote/ensure-path
 
-%NPM: @wrote/ensure-path%
+[![npm version](https://badge.fury.io/js/%40wrote%2Fensure-path.svg)](https://npmjs.org/package/@wrote/ensure-path)
 
 `@wrote/ensure-path` is a Node.js package that creates all directories on the way to the path.
 
