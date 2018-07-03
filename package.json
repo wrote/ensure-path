@@ -34,8 +34,10 @@
   },
   "homepage": "https://github.com/artdecocode/-wrote-ensure-path#readme",
   "devDependencies": {
+    "catchment": "2.0.1",
     "documentary": "1.8.1",
     "eslint-config-artdeco": "1.0.0",
+    "spawncommand": "2.0.1",
     "yarn-s": "1.1.0",
     "zoroaster": "2.1.0"
   },
