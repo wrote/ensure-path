@@ -1,3 +1,9 @@
+## 4 July 2018
+
+### 1.0.2
+
+- [package] Move to `wrote` github org, and add tags.
+
 ## 3 July 2018
 
 ### 1.0.1
