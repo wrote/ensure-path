@@ -22,17 +22,28 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/artdecocode/-wrote-ensure-path.git"
+    "url": "git://github.com/wrote/ensure-path.git"
   },
   "keywords": [
-    "@wrote/ensure-path"
+    "@wrote",
+    "path",
+    "ensure",
+    "traverse",
+    "tree",
+    "fs",
+    "filesystem",
+    "directory",
+    "dir",
+    "folder",
+    "file",
+    "mkdir"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/artdecocode/-wrote-ensure-path/issues"
+    "url": "https://github.com/wrote/ensure-path/issues"
   },
-  "homepage": "https://github.com/artdecocode/-wrote-ensure-path#readme",
+  "homepage": "https://github.com/wrote/ensure-path#readme",
   "devDependencies": {
     "catchment": "2.0.1",
     "documentary": "1.8.2",
