@@ -1,6 +1,6 @@
 {
   "name": "@wrote/ensure-path",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create all directories on the way to the path.",
   "main": "build",
   "scripts": {
