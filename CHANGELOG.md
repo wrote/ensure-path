@@ -3,6 +3,7 @@
 ### 1.0.3
 
 - [fix] Make sure there is no error when multiple calls are made in parallel.
+- [build] Build with [`alamode`](https://alamode.cc).
 
 ## 4 July 2018
 
