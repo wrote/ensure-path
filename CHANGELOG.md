@@ -1,3 +1,9 @@
+## 15 September 2018
+
+### 1.0.3
+
+- [fix] Make sure there is no error when multiple calls are made in parallel.
+
 ## 4 July 2018
 
 ### 1.0.2
