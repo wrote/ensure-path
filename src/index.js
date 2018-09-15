@@ -3,9 +3,8 @@ import makePromise from 'makepromise'
 import { dirname } from 'path'
 
 /**
- * Make sure that a file can be created by creating all directories to which it belongs, e.g., `ensurePath('/usr/local/test/wrote.data')` will attempt to create `/usr/local/test/` directory recursively starting from `usr`.
+ * Makes sure that a file can be created by creating all directories to which it belongs, e.g., `ensurePath('~/path/to/wrote.data')` will attempt to create `~/path/to` directory recursively.
  * @param {string} path Path to the file
- * @returns {Promise.<string>} Same path as passed
  * @throws {Error} When the first folder in the path is non-executable
  */
 export default async function ensurePath(path) {
@@ -27,30 +26,14 @@ export default async function ensurePath(path) {
  */
 async function make(dir) {
   try {
-    const res = await makeDir(dir)
-    return res
+    await makePromise(mkdir, dir)
   } catch (err) {
-    if (/ENOENT/.test(err.message)) {
+    if (err.code == 'ENOENT') {
       const parentDir = dirname(dir)
       await make(parentDir)
-      const res2 = await make(dir)
-      return res2
+      await make(dir)
+    } else if (err.code != 'EEXIST') { // created in parallel
+      throw err
     }
-    throw err
   }
 }
-
-/**
- * Promisified fs.mkdir
- * @param {string} dir directory name
- * @returns {string} created directory name
- */
-async function makeDir(dir) {
-  const res = await makePromise(mkdir, dir, dir)
-  return res
-}
-
-/**
- * @typedef {Object} Config
- * @property {string} type The type.
- */

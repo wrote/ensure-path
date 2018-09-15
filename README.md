@@ -13,6 +13,7 @@ yarn add -E @wrote/ensure-path
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
   * [`async ensurePath(path: string): string`](#async-ensurepathpath-string-string)
+- [Copyright](#copyright)
 
 ## API
 
@@ -42,7 +43,7 @@ import ensurePath from '@wrote/ensure-path'
 })()
 ```
 
----
+## Copyright
 
 (c) [Art Deco][1] 2018
 

@@ -1,8 +1,8 @@
 import { equal, throws } from 'zoroaster/assert'
 import { join } from 'path'
+import TempContext from 'temp-context'
 import Context from '../context'
 import ensurePath from '../../src'
-import TempContext from 'temp-context'
 
 /** @type {Object.<string, (c: Context, tc: TempContext)>} */
 const T = {
@@ -34,11 +34,18 @@ const T = {
   async 'does not throw an error when dir already exists'(
     { assertCanWriteFile }, { TEMP },
   ) {
-    const path = join(TEMP, 'file.data')
+    const path = join(TEMP, 'path/to/file.data')
     const res = await ensurePath(path)
     equal(res, path)
     await assertCanWriteFile(path)
     await ensurePath(path)
+  },
+  async 'works with parallel calls'(_, { TEMP }) {
+    const path = join(TEMP, 'path/to/file.data')
+    await Promise.all([
+      ensurePath(path),
+      ensurePath(path),
+    ])
   },
 }
 
