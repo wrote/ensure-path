@@ -1,37 +1,40 @@
 import { equal, throws } from 'zoroaster/assert'
-import { resolve } from 'path'
+import { join } from 'path'
 import Context from '../context'
 import ensurePath from '../../src'
+import TempContext from 'temp-context'
 
-/** @type {Object.<string, (c: Context)>} */
+/** @type {Object.<string, (c: Context, tc: TempContext)>} */
 const T = {
-  context: Context,
+  context: [Context, TempContext],
   'is a function'() {
     equal(typeof ensurePath, 'function')
   },
-  async 'creates a path to the file'({ assertCanWriteFile, TEMP_TEST_DIR }) {
-    const path = resolve(TEMP_TEST_DIR, 'path/to/temp/file.data')
+  async 'creates a path to the file'(
+    { assertCanWriteFile }, { TEMP },
+  ) {
+    const path = join(TEMP, 'path/to/temp/file.data')
     const res = await ensurePath(path)
     equal(res, path)
     await assertCanWriteFile(path)
   },
-  async 'rejects when trying to create a path where cannot'({
-    makeNoExecutableDirectory, TEMP_NOX_DIR,
-  }) {
-    await makeNoExecutableDirectory()
-    const path = resolve(TEMP_NOX_DIR, 'path/to/temp/file.data')
+  async 'rejects when trying to create a path where cannot'(
+    { makeNoExecutableDirectory }, { TEMP },
+  ) {
+    const ne = join(TEMP, 'non-executable')
+    const path = join(ne, '/test/file.data')
+    await makeNoExecutableDirectory(ne)
     await throws({
-      async fn() {
-        await ensurePath(path)
-      },
+      fn: ensurePath,
+      args: path,
       code: 'EACCES',
       message: /permission denied/,
     })
   },
-  async 'does not throw an error when dir already exists'({
-    assertCanWriteFile, TEMP_TEST_DIR,
-  }) {
-    const path = resolve(TEMP_TEST_DIR, 'file.data')
+  async 'does not throw an error when dir already exists'(
+    { assertCanWriteFile }, { TEMP },
+  ) {
+    const path = join(TEMP, 'file.data')
     const res = await ensurePath(path)
     equal(res, path)
     await assertCanWriteFile(path)
