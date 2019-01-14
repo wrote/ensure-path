@@ -40,4 +40,3 @@ async function make(dir) {
 
 
 module.exports = ensurePath
-//# sourceMappingURL=index.js.map

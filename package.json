@@ -14,7 +14,7 @@
     "rec": "NODE_DEBUG=appshot appshot -T 23 -a Terminal -y 150 -f",
     "e": "node example",
     "example/": "yarn e example/example.js",
-    "b": "alamode src -o build",
+    "b": "alamode src -o build -s",
     "build": "yarn-s b doc"
   },
   "files": [
