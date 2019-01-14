@@ -2,7 +2,7 @@
 
 %NPM: @wrote/ensure-path%
 
-`@wrote/ensure-path` is a Node.js package that creates all directories on the way to the path.
+`@wrote/ensure-path` Creates All Directories On The Way To The Path.
 
 ```sh
 yarn add -E @wrote/ensure-path
