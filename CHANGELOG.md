@@ -3,6 +3,7 @@
 ### 1.0.4
 
 - [package] Add the "module" field.
+- [package] Remove source maps.
 
 ## 15 September 2018
 
