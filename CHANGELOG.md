@@ -1,5 +1,11 @@
 ## 14 January 2019
 
+### 1.0.5
+
+- [deps] Update `makepromise`.
+
+## 14 January 2019
+
 ### 1.0.4
 
 - [package] Add the "module" field.

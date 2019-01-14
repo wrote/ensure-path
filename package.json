@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/wrote/ensure-path#readme",
   "devDependencies": {
-    "catchment": "3.2.0",
+    "catchment": "3.2.1",
     "documentary": "1.20.1",
     "eslint-config-artdeco": "1.0.1",
     "spawncommand": "2.1.0",
@@ -56,6 +56,6 @@
     "zoroaster": "3.6.6"
   },
   "dependencies": {
-    "makepromise": "3.0.1"
+    "makepromise": "3.0.2"
   }
 }
