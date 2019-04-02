@@ -14,4 +14,4 @@ import ensurePath from '@wrote/ensure-path'
 
 Makes sure that the path can be written to by recursively creating all necessary directories. Returns the same path as passed to the function.
 
-%EXAMPLE: example/example.js, ../src => @wrote/ensure-path%
+%EXAMPLE: example/example, ../src => @wrote/ensure-path%
