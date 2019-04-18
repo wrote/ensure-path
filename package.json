@@ -1,6 +1,6 @@
 {
   "name": "@wrote/ensure-path",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Create all directories on the way to the path.",
   "main": "build/index.js",
   "module": "src/index.js",
