@@ -1,3 +1,9 @@
+## 18 April 2019
+
+### [1.0.7](https://github.com/wrote/ensure-path/compare/v1.0.6...v1.0.7)
+
+- [deps] Update and unlock dependencies.
+
 ## 2 April 2019
 
 ### [1.0.6](https://github.com/wrote/ensure-path/compare/v1.0.5...v1.0.6)
