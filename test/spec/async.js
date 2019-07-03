@@ -1,4 +1,4 @@
-import { equal, throws } from 'zoroaster/assert'
+import { equal, throws } from '@zoroaster/assert'
 import { join } from 'path'
 import TempContext from 'temp-context'
 import Context from '../context'

@@ -4,10 +4,10 @@ const { dirname } = require('path');
 
 /**
  * Makes sure that a file can be created by creating all directories to which it belongs, e.g., `ensurePath('~/path/to/wrote.data')` will attempt to create `~/path/to` directory recursively.
- * @param {string} path Path to the file
- * @throws {Error} When the first folder in the path is non-executable
+ * @param {string} path The path to the file.
+ * @throws {Error} When the first folder in the path is non-executable.
  */
-               async function ensurePath(path) {
+async function ensurePath(path) {
   const dir = dirname(path)
   try {
     await make(dir)
