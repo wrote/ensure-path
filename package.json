@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/wrote/ensure-path#readme",
   "devDependencies": {
+    "alamode": "^2.3.4",
     "catchment": "^3.3.0",
     "documentary": "^1.27.4",
     "eslint-config-artdeco": "1.0.1",

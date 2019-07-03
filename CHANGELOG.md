@@ -1,3 +1,10 @@
+## 3 July 2019
+
+### [1.1.0](https://github.com/wrote/ensure-path/compare/v1.0.8...v1.1.0)
+
+- [feature] Add the `sync` version of the function.
+- [build] Compiler with newer _ÀLaMode_ for tidier code.
+
 ## 18 April 2019
 
 ### [1.0.8](https://github.com/wrote/ensure-path/compare/v1.0.7...v1.0.8)
