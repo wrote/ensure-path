@@ -38,6 +38,8 @@
     "dir",
     "folder",
     "file",
+    "create",
+    "mkdirp",
     "mkdir"
   ],
   "author": "Anton <anton@adc.sh>",
