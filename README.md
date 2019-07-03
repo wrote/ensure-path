@@ -5,7 +5,7 @@
 `@wrote/ensure-path` Creates All Directories On The Way To The Path.
 
 ```sh
-yarn add -E @wrote/ensure-path
+yarn add @wrote/ensure-path
 ```
 
 <p align="center"><a href="#table-of-contents"><img src="/.documentary/section-breaks/0.svg?sanitize=true"></a></p>
