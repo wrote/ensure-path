@@ -8,6 +8,10 @@
 yarn add -E @wrote/ensure-path
 ```
 
+%~%
+
 ## Table Of Contents
 
 %TOC%
+
+%~%

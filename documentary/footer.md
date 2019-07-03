@@ -1,5 +1,5 @@
 ## Copyright
 
-(c) [Wrote][1] 2019
+<wrote-footer />
 
-[1]: https://wrote.cc
+%~ -1%

@@ -1,4 +1,3 @@
-/* yarn example */
 import { resolve } from 'path'
 import ensurePath from '../src'
 
